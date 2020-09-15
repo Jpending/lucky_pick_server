@@ -1,0 +1,108 @@
+CREATE TABLE cash4life_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+  played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL,
+  number4 INTEGER NOT NULL,
+  number5 INTEGER NOT NULL
+)
+
+CREATE TABLE megamillions_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+  played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL,
+  number4 INTEGER NOT NULL,
+  number5 INTEGER NOT NULL,
+  megaball INTEGER NOT NULL
+)
+
+CREATE TABLE powerball_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+  played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL,
+  number4 INTEGER NOT NULL,
+  number5 INTEGER NOT NULL,
+  powerball INTEGER NOT NULL
+)
+
+CREATE TABLE quickdraw_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+  played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL,
+  number4 INTEGER NOT NULL,
+  number5 INTEGER NOT NULL,
+  number6 INTEGER NOT NULL,
+  number7 INTEGER NOT NULL,
+  number8 INTEGER NOT NULL,
+  number9 INTEGER NOT NULL,
+  number10 INTEGER NOT NULL
+)
+
+CREATE TABLE pick6_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+  played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL,
+  number4 INTEGER NOT NULL,
+  number5 INTEGER NOT NULL,
+  number6 INTEGER NOT NULL
+)
+
+CREATE TABLE jerseycash5_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+  played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL,
+  number4 INTEGER NOT NULL,
+  number5 INTEGER NOT NULL
+)
+
+CREATE TABLE pick4_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+  played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL,
+  number4 INTEGER NOT NULL
+)
+
+CREATE TABLE pick3_numbers(
+  id SERIAL PRIMARY KEY,
+  date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
+  user_id INTEGER
+        REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
+        played BOOLEAN DEFAULT false NOT NULL,
+  number1 INTEGER NOT NULL,
+  number2 INTEGER NOT NULL,
+  number3 INTEGER NOT NULL
+)
