@@ -1,14 +1,14 @@
-CREATE TABLE cash4life_numbers(
+CREATE TABLE cashforlife_numbers(
   id SERIAL PRIMARY KEY,
   date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
   played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL,
-  number4 INTEGER NOT NULL,
-  number5 INTEGER NOT NULL
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL,
+  numberfour INTEGER NOT NULL,
+  numberfive INTEGER NOT NULL
 )
 
 CREATE TABLE megamillions_numbers(
@@ -17,11 +17,11 @@ CREATE TABLE megamillions_numbers(
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
   played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL,
-  number4 INTEGER NOT NULL,
-  number5 INTEGER NOT NULL,
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL,
+  numberfour INTEGER NOT NULL,
+  numberfive INTEGER NOT NULL,
   megaball INTEGER NOT NULL
 )
 
@@ -31,11 +31,11 @@ CREATE TABLE powerball_numbers(
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
   played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL,
-  number4 INTEGER NOT NULL,
-  number5 INTEGER NOT NULL,
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL,
+  numberfour INTEGER NOT NULL,
+  numberfive INTEGER NOT NULL,
   powerball INTEGER NOT NULL
 )
 
@@ -45,64 +45,64 @@ CREATE TABLE quickdraw_numbers(
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
   played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL,
-  number4 INTEGER NOT NULL,
-  number5 INTEGER NOT NULL,
-  number6 INTEGER NOT NULL,
-  number7 INTEGER NOT NULL,
-  number8 INTEGER NOT NULL,
-  number9 INTEGER NOT NULL,
-  number10 INTEGER NOT NULL
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL,
+  numberfour INTEGER NOT NULL,
+  numberfive INTEGER NOT NULL,
+  numbersix INTEGER NOT NULL,
+  numberseven INTEGER NOT NULL,
+  numbereight INTEGER NOT NULL,
+  numbernine INTEGER NOT NULL,
+  numberten INTEGER NOT NULL
 )
 
-CREATE TABLE pick6_numbers(
+CREATE TABLE picksix_numbers(
   id SERIAL PRIMARY KEY,
   date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
   played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL,
-  number4 INTEGER NOT NULL,
-  number5 INTEGER NOT NULL,
-  number6 INTEGER NOT NULL
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL,
+  numberfour INTEGER NOT NULL,
+  numberfive INTEGER NOT NULL,
+  numbersix INTEGER NOT NULL,
 )
 
-CREATE TABLE jerseycash5_numbers(
+CREATE TABLE jerseycashfive_numbers(
   id SERIAL PRIMARY KEY,
   date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
   played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL,
-  number4 INTEGER NOT NULL,
-  number5 INTEGER NOT NULL
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL,
+  numberfour INTEGER NOT NULL,
+  numberfive INTEGER NOT NULL
 )
 
-CREATE TABLE pick4_numbers(
+CREATE TABLE pickfour_numbers(
   id SERIAL PRIMARY KEY,
   date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
   played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL,
-  number4 INTEGER NOT NULL
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL,
+  numberfour INTEGER NOT NULL
 )
 
-CREATE TABLE pick3_numbers(
+CREATE TABLE pickthree_numbers(
   id SERIAL PRIMARY KEY,
   date_added TIMESTAMPTZ DEFAULT now() NOT NULL,
   user_id INTEGER
         REFERENCES lucky_pick_users(id) ON DELETE CASCADE NOT NULL,
         played BOOLEAN DEFAULT false NOT NULL,
-  number1 INTEGER NOT NULL,
-  number2 INTEGER NOT NULL,
-  number3 INTEGER NOT NULL
-)
+  numberone INTEGER NOT NULL,
+  numbertwo INTEGER NOT NULL,
+  numberthree INTEGER NOT NULL
+);
